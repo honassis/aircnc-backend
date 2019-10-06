@@ -24,12 +24,12 @@ mongoose.connect(
         useUnifiedTopology: true
     });
 
-    app.use((req, res, next)=>{
-        req.io = io;
-        req.connectedUsers = connectedUsers;
+app.use((req, res, next) => {
+    req.io = io;
+    req.connectedUsers = connectedUsers;
 
-        return next();
-    });
+    return next();
+});
 // GET , POST , PUT , DELETE
 
 // req.query = acessar query params ( para filtros)
